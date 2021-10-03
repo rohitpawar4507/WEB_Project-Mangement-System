@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body {
+ 
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+  
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+.select{
+    width: fit-content;
+    column-width: 20px;
+}
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<form action="Data_Entry.php" method="POST">
+  <div class="container">
+    <h1>Register Here</h1>
+    
+    <p>Please fill in this form to create an account.</p>
+    <hr>
+    <label for="name"><b>Name</b></label>
+    <input type="text" placeholder="Enter your Name" pattern="^[A-Za-zÀ-ÿ ,.'-]+$" title="Please enter full name" name="name" id="name" required>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$" title="Please enter valid email" name="email" id="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" title="Password must contain: Minimum 6 characters atleast 1 Alphabet and 1 Number" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$" name="psw" id="psw" required>
+
+    <label for="password"><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" title="Password need to match" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$" name="password" id="psw-repeat" required>
+
+    <label for="role"><b>Role</b></label>
+    <br><br>
+    <input type="radio" name="role" value="Student" id="Student">
+            &nbsp;
+        <span id="Student">Student</span>
+        &nbsp;&nbsp;&nbsp;
+    <input type="radio" name="role" value="Faculty" id="Faculty">
+         &nbsp;
+    <span id="Faculty">Faculty</span>
+        
+    <br><br>
+    
+    <label><b>Class :</b></label>
+            <br><br>
+    <input type="radio" name="class" value="FE" id="fe">
+            &nbsp;
+        <span id="fe">FE</span>
+        &nbsp;&nbsp;&nbsp;
+    <input type="radio" name="class" value="SE" id="se">
+         &nbsp;&nbsp;&nbsp;
+    <span id="se">SE</span>
+  &nbsp;
+    <input type="radio" name="class" value="TE" id="te">
+            &nbsp;
+        <span id="te">TE</span>
+        &nbsp;&nbsp;&nbsp;
+    <input type="radio" name="class" value="BE" id="be">
+         &nbsp;
+    <span id="be">BE</span>
+    <br><br> 
+    <label><b>Departments :</b></label>
+    <br><br>
+<input type="radio" name="Departments" value="CSE" id="CS">
+    &nbsp;
+<span id="CS">CS</span>
+&nbsp;&nbsp;&nbsp;
+<input type="radio" name="Departments" value="IT" id="IT">
+ &nbsp;&nbsp;&nbsp;
+<span id="IT">IT</span>
+&nbsp;
+<input type="radio" name="Departments" value="Civil" id="Civil">
+    &nbsp;
+<span id="Civil">Civil</span>
+&nbsp;&nbsp;&nbsp;
+<input type="radio" name="Departments" value="MECH" id="Mec">
+ &nbsp;
+<span id="Mec">MECH</span>
+<input type="radio" name="Departments" value="ELE" id="Ele">
+ &nbsp;
+<span id="Ele">ELE</span>
+<input type="radio" name="Departments" value="ENTC" id="entc">
+ &nbsp;
+<span id="entc">ENTC</span>
+
+<br><br>
+    <label><b>Contact No:</b></label>
+    <br>
+    <input type="text" name="Contact" pattern="[0-9]{10}"
+    id="Contact" placeholder="Enter your Contact No." title="Contact contain 10 digit only" required>
+
+    <label><b>Gender</b> :</label>
+        <br><br>
+        &nbsp;&nbsp;&nbsp;
+    <input type="radio" name="gender" value="Male" id="Male">
+            &nbsp;
+
+    
+    <span id="Male">Male</span>
+     &nbsp;&nbsp;&nbsp;
+    <input type="radio" name="gender" value="Female" id="Female">
+            &nbsp;
+    <span id="Female">Female</span>
+            
+    <br>
+    
+    <input type="submit" name="submit" value="Submit" onclick="alert('Registration done Succesfully')" class="registerbtn">
+  </div>
+  
+  <div class="container signin">
+    <p>Already have an account? <a href="LoginForm.php">Sign in</a>.</p>
+  </div>
+</form>
+</body>
+</html>

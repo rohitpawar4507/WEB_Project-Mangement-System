@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Group</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<style>
+body {
+ 
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+  
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+.select{
+    width: fit-content;
+    column-width: 20px;
+}
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+.menu-bar{
+  padding: 15px;
+  background-color: white;
+}
+</style>
+
+
+</head>
+
+<body >
+
+<form   action="Group_connection.php" method="POST">
+  <div class="container">
+    <h1>Create Group</h1>
+    <p>Please fill in this form to create an Group Info.</p>
+    <hr>
+    <label for="ggname"><b> Group Name:</b></label>
+    <br>
+    <input type="text" name="group_name" id="name" pattern="^[A-Za-zÀ-ÿ ,.'-]+$"  placeholder="Enter Your Project Group Name">
+    <br><br>
+    <label for="ppname"><b>Project Title:</b></label> 
+    <br>
+    <input type="text" name="project_name" id="project_name" pattern="^[A-Za-zÀ-ÿ ,.'-]+$"  placeholder="Enter Your Project Name " required >
+    <br><br>
+    <label for="mmname"><b>Member 1</b></label>
+    <input type="text" placeholder="Enter your Name" pattern="^[A-Za-zÀ-ÿ ,.'-]+$"  name="m1_name" id="m1_name" required>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$" name="m1_email" id="m1_email" required>
+
+    <label for="contact"><b>Contact</b></label>
+    <input type="text" name="m1_contact" 
+    id="contact" pattern="[0-9]{10}" placeholder="Enter your Contact No." required>
+
+    <label for="name"><b>Member 2</b></label>
+    <input type="text" placeholder="Enter your Name" pattern="^[A-Za-zÀ-ÿ ,.'-]+$"  name="m2_name" id="m2_name" required>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$" name="m2_email" id="m2_email" required>
+
+    <label for="contact"><b>Contact</b></label>
+    <input type="text" name="m2_contact" id="contact" pattern="[0-9]{10}" placeholder="Enter your Contact No." required>
+
+
+    <label for="name"><b>Member 3</b></label>
+    <input type="text" placeholder="Enter your Name" pattern="^[A-Za-zÀ-ÿ ,.'-]+$"  name="m3_name" id="m3_name" required>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$" name="m3_email" id="m3_email" required>
+
+    <label for="contact"><b>Contact</b></label>
+    <input type="text" name="m3_contact" id="contact" pattern="[0-9]{10}" placeholder="Enter your Contact No." required>
+
+    <label for="name"><b>Member 4</b></label>
+    <input type="text" placeholder="Enter your Name" pattern="^[A-Za-zÀ-ÿ ,.'-]+$"  name="name" id="m4_name">
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$" name="m4_email" id="m4_email">
+
+    <label for="contact"><b>Contact</b></label>
+    <input type="text" name="m4_contact" id="contact" pattern="[0-9]{10}" placeholder="Enter your Contact No.">
+
+    <label for="domain"><b>Domain (required):</b>:</label>
+      <select id="domain" name="domain" size="1" required>
+          <option value="domain">Select</option>
+          <option value="AI">Artificial Intelligence</option>
+          <option value="IOT">IOT</option>
+          <option value="BigData">BigData</option>
+          <option value="Cloud Computing">Cloud Computing</option>
+          <option value="Machine Learning">Machine Learning</option>
+          <option value="Image Processing">Image Processing</option>
+          <option value="Web Security">Web Security</option>
+          <option value="Web Development">Web Development</option>
+          <option value="Robotics">Robotics</option>
+          <option value="Cryptography">Cryptography</option>
+
+      </select> 
+
+
+    
+
+    <button type="submit" name="submit" value="submit" onclick="alert('Form Succesfully Submitted....')" class="registerbtn">Submit</button>
+  </div>
+  <div class="menu-bar">
+    <ul>
+     
+        <li><a href="Student_D.html">Go Back To Student Dashboard</a></li>
+        </ul>
+    </div>
+  
+</form>
+
+</body>
+</html>

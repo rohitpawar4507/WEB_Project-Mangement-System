@@ -1,0 +1,69 @@
+@import "https://use.fontawesome.com/releases/v5.5.0/css/all.css";
+*{
+    margin: 0;
+    padding: 0;
+ 
+}
+body{
+    background-image: url(Apple.jpeg);
+    background-size:cover;
+   /* background-position:center;*/
+    font-family:Arial, Helvetica, sans-serif;
+
+}
+.menu-bar{
+    background: rgb(173, 240, 178);
+    text-align: center;
+
+}
+.menu-bar ul{
+    display: inline-flex;
+    list-style:none ;
+    color:black;
+
+}
+.menu-bar ul li{
+    width: 110px;
+    margin: 10px;
+    padding: 5px;
+}
+.menu-bar ul li a
+{
+    text-decoration: none;
+    color:black
+}
+.active, .menu-bar ul li:hover
+{
+    background: rgb(81, 236, 102);
+    border-radius: 5px;
+}
+.menu-bar .fa
+{
+    margin-right: 8px;
+}
+.sub-menu-1{
+    display: none;
+}
+.menu-bar ul li:hover .sub-menu-1
+{
+    display: block;
+    position: absolute;
+    background: rgba(185, 241, 198, 0.678);
+    margin-top: 5px;
+    margin-left: -10px;
+}
+.menu-bar ul li:hover .sub-menu-1 ul
+{
+    display: inline-block;
+    margin: 10px;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li
+{
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px dotted #ffff;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+}
+
